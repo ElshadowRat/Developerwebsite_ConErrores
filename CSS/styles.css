@@ -25,3 +25,17 @@ body{
     font-size: 2rem;
 }
 
+.contenedor{
+    width: 120rem;
+   /* margin-top: 0px; *
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0px;*/
+    margin: 0 auto;
+
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+
