@@ -26,16 +26,50 @@ body{
 }
 
 .contenedor{
-    width: 120rem;
+    max-width: 120rem;
    /* margin-top: 0px; *
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 0px;*/
     margin: 0 auto;
-
 }
 
 .nav-bg{
-    background-color: var(--secundario);
+    background-color: var(--secundario); 
 }
+
+.navegacion-principal{
+    
+    display: flex;
+    flex-direction: column;
+    /*justify-content sirve para las filas(row) y align-items sirve para las columnas*/
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 2rem;
+    align-items: center;
+
+}
+
+/* media cueri, hover, responsive, flex, 06-11-2023 */
+
+.navegacion-principal a{
+    padding: 1rem;
+    color: var(--blanco);
+    text-decoration: none;/*quita el subrayado a las letras*/
+}
+
+/* ":" pseudo-clase */
+.navegacion-principal a:hover{ /* con el hover ponemos la interaccion cuando el mause pasa robre el elemento*/
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+
+@media (min-width: 760px) {
+    .navegacion-principal{
+        flex-direction: row;
+    }
+ 
+}
+
 
