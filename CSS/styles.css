@@ -1,75 +1,162 @@
-:root{
+:root {
     --blanco: #ffffff;
     --oscuro: #212121;
-    --primario: #ffc107; /*custom propeties*/
+    --primario: #ffc107;
+    /*custom propeties*/
     --secundario: #0097a7;
     --gris: #757575;
 }
 
-html{
+html {
     font-size: 62.5%;
+    box-sizing: border-box;
+    /*hack para el manejo de box model*/
 }
 
-body{
+/*hack para el manejo de bos model*/
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
     font-size: 16px;
     font-family: 'Krub', sans-serif;
 }
 
-.titulo{
-    text-align: center;
+h1 {
     font-size: 3.8rem;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
-.titulo span{
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+
+.titulo span {
     font-size: 2rem;
 }
 
-.contenedor{
+.contenedor {
     max-width: 120rem;
-   /* margin-top: 0px; *
+    /* margin-top: 0px; *
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 0px;*/
     margin: 0 auto;
 }
 
-.nav-bg{
-    background-color: var(--secundario); 
+.nav-bg {
+    background-color: var(--secundario);
 }
 
-.navegacion-principal{
-    
+.navegacion-principal {
+
     display: flex;
     flex-direction: column;
     /*justify-content sirve para las filas(row) y align-items sirve para las columnas*/
     justify-content: space-between;
     font-weight: bold;
     font-size: 2rem;
+    /* alinea los items cuando la página esta en 760px*/
     align-items: center;
 
 }
 
 /* media cueri, hover, responsive, flex, 06-11-2023 */
 
-.navegacion-principal a{
+.navegacion-principal a {
     padding: 1rem;
     color: var(--blanco);
-    text-decoration: none;/*quita el subrayado a las letras*/
+    text-decoration: none;
+    /*quita el subrayado a las letras*/
 }
 
 /* ":" pseudo-clase */
-.navegacion-principal a:hover{ /* con el hover ponemos la interaccion cuando el mause pasa robre el elemento*/
+.navegacion-principal a:hover {
+    /* con el hover ponemos la interaccion cuando el mause pasa robre el elemento*/
     background-color: var(--primario);
     color: var(--oscuro);
 }
 
 
 @media (min-width: 760px) {
-    .navegacion-principal{
+    .navegacion-principal {
         flex-direction: row;
     }
- 
 }
 
+/*hero*/
 
+.hero {
+    background-image: url(../img/hero.png);
+    /* "../" es para regresar a un nivel de directorio, la carpeta img está afuera de CSS */
+    background-repeat: no-repeat;
+    /* para evitar que la imagen se repita si se hace zoom out*/
+    background-size: cover;
+    height: 450px;
+    /*alto del elemento hero*/
+    position: relative;
+    /* el padre debe ser relative */
+
+
+}
+
+.contenido-hero {
+    position: absolute;
+    /* el hijo debe ser absolute */
+    background-color: rgba(0, 0, 0, .7);
+    /* el .7 es el 70% de transparencia */
+    width: 100%;
+    height: 100%;
+    /*alinear vertica y horizontalmente*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.contenido-hero p,
+.contenido-hero h2 {
+    color: var(--blanco);
+
+
+}
+
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
+
+.boton{
+    background-color: var(--secundario);/* color del fondo del boton*/
+    text-decoration: none;/*quitar subrayado*/
+    padding: 1rem 3rem;/*espacio interior*/
+    border-radius: .5rem;/*espacio exteriror hacia arriba*/
+    color: var(--blanco);/*color de la letra*/
+    margin-top: 3rem;/*en negrita*/
+    font-weight: bold;/* en negritas */
+    font-size: 2rem;/* tamanño de la letra */
+    text-transform: uppercase;/*poner en mayúscula*/
+    text-align: center;/* centrar el texto */
+    width: 90%;/*ancho del boton que abarque el 90% si la pantalla es pequeña*/
+
+}
+
+@media (min-width: 768px) {
+    .boton{
+        width: auto;
+    }
+}
