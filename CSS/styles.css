@@ -332,11 +332,11 @@ h3 {
    .footer{
     text-align: center;
    }
-/*Scroll snap
+Scroll snap
 .titulo, .servicios-heading, .contacto-heading{
     scroll-snap-align: start;/* Indica el punto en el contenedor de desplazamiento al que 
-    debe ajustarse el contenido
-    scroll-snap-stop: always; Controla si el desplazamiento debe detenerse siempre en 
-    los puntos de ajuste 
-}*/
+    debe ajustarse el contenido*/
+    scroll-snap-stop: always; /*Controla si el desplazamiento debe detenerse siempre en 
+    los puntos de ajuste */
+}
    
