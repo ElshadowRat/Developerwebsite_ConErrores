@@ -16,7 +16,7 @@ html {
     background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
     scroll-snap-type: y mandatory; /*y simbolisa que el scrooll sera de manera vertical. Mandatpry define que tan estricto se requiere el scroll*/
 }
-Scroll snap
+/* Scroll snap */
 .titulo, .servicios-heading, .contacto-heading{
     scroll-snap-align: start;/* Indica el punto en el contenedor de desplazamiento al que 
     debe ajustarse el contenido*/
